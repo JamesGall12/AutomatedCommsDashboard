@@ -302,29 +302,6 @@
 
         <!-- Overview Tab -->
         <div id="overview" class="tab-content active">
-            <div class="metrics-grid">
-                <div class="metric-card blue">
-                    <div class="metric-value">279</div>
-                    <div class="metric-label">Avg Monthly Web Subs</div>
-                    <div class="metric-change" style="color: #e74c3c;">-31.7% vs prev 6m</div>
-                </div>
-                <div class="metric-card green">
-                    <div class="metric-value">108.6%</div>
-                    <div class="metric-label">Web Sub → Initial</div>
-                    <div class="metric-change">Conversion Rate</div>
-                </div>
-                <div class="metric-card purple">
-                    <div class="metric-value">296</div>
-                    <div class="metric-label">Avg Monthly Initials</div>
-                    <div class="metric-change">Recent 6 months</div>
-                </div>
-                <div class="metric-card orange">
-                    <div class="metric-value">767</div>
-                    <div class="metric-label">Avg Monthly Follow-ups</div>
-                    <div class="metric-change">65.5% automated</div>
-                </div>
-            </div>
-
             <div class="chart-container">
                 <div class="chart-title">Overall Booking Trends</div>
                 <div class="chart-wrapper">
@@ -378,7 +355,7 @@
         <!-- Operational Impact Tab -->
         <div id="operations" class="tab-content">
             <div class="analysis-section">
-                <h3 class="chart-title">Patient-Base-Driven Baseline Analysis</h3>
+                <h3 class="chart-title">Predicted Baseline Analysis</h3>
                 <div class="alert alert-info">
                     <strong>🔍 Why This Analysis is More Accurate</strong><br>
                     <strong>Previous flaw:</strong> Assumed flat 370/month baseline, ignoring that more initial patients = larger follow-up pool.<br>
@@ -406,7 +383,7 @@
             </div>
 
             <div class="chart-container">
-                <div class="chart-title">Follow-ups: Actual vs Patient-Base-Driven Baseline (Jan 2022 - May 2025)</div>
+                <div class="chart-title">Follow-ups: Actual vs Predicted (Jan 2022 - May 2025)</div>
                 <div class="chart-wrapper">
                     <canvas id="operationsChart"></canvas>
                 </div>
@@ -470,7 +447,7 @@
                 <div class="alert alert-danger">
                     <h4 style="margin-bottom: 10px;">🚨 Immediate Concerns</h4>
                     <ul style="margin-left: 20px;">
-                        <li>Web submissions declined from 747 (May 2024) to 222 (May 2025) - 70% drop</li>
+                        <li>New online enquiries declined from 747 (May 2024) to 222 (May 2025) - 70% drop</li>
                         <li>This represents a major pipeline risk for future growth</li>
                         <li>Current conversion rate is 108.6% - optimizing this could offset enquiry decline</li>
                     </ul>
@@ -479,9 +456,9 @@
                 <div class="alert alert-success">
                     <h4 style="margin-bottom: 10px;">💡 Proven Operational Wins</h4>
                     <ul style="margin-left: 20px;">
-                        <li><strong>Patient Base Growth:</strong> Natural follow-up baseline grew from 434 to 564/month due to expanding patient base</li>
-                        <li><strong>Promotional Campaigns:</strong> 708 additional bookings above patient-base-driven growth during campaigns</li>
-                        <li><strong>Automation Success:</strong> 2,399 additional bookings sustained above natural baseline (avg +218/month)</li>
+                        <li><strong>Patient Base Growth:</strong> Natural follow-up predicted baseline grew from 435 to 565/month due to expanding patient base</li>
+                        <li><strong>Promotional Campaigns:</strong> 708 additional bookings above predicted growth during campaigns</li>
+                        <li><strong>Automation Success:</strong> 2,399 additional bookings sustained above predicted baseline (avg +218/month)</li>
                         <li><strong>Total Operational Value:</strong> 3,107 bookings above natural business growth</li>
                     </ul>
                 </div>
@@ -489,7 +466,7 @@
                 <div class="alert alert-info">
                     <h4 style="margin-bottom: 10px;">📈 Strategic Recommendations</h4>
                     <ul style="margin-left: 20px;">
-                        <li><strong>Marketing:</strong> Investigate cause of web submission decline - SEO, ads, or market factors</li>
+                        <li><strong>Marketing:</strong> Investigate cause of online enquiry decline - SEO, ads, or market factors</li>
                         <li><strong>Conversion:</strong> Focus on improving 108.6% conversion rate through better lead nurturing</li>
                         <li><strong>Automation Expansion:</strong> System delivers avg +218 bookings/month - apply to initial bookings too</li>
                         <li><strong>System Scaling:</strong> Expand successful automation approach across patient journey</li>
@@ -738,7 +715,7 @@
                 data: {
                     labels: webSubsLabels,
                     datasets: [{
-                        label: 'Web Submissions',
+                        label: 'New Online Enquiries',
                         data: webSubsData,
                         borderColor: '#f39c12',
                         backgroundColor: 'rgba(243, 156, 18, 0.1)',
@@ -902,7 +879,7 @@
                     labels: bookingData.labels, // Full dataset from Jan 2022
                     datasets: [
                         {
-                            label: 'Patient-Base-Driven Baseline',
+                            label: 'Predicted',
                             data: bookingData.patientBaseline,
                             borderColor: '#95a5a6',
                             backgroundColor: 'rgba(149, 165, 166, 0.1)',
