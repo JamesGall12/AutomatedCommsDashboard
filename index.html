@@ -293,7 +293,7 @@
 
         <div class="nav-tabs">
             <div class="nav-tab active" onclick="showTab('overview')">Overview</div>
-            <div class="nav-tab" onclick="showTab('websubs')">Web Submissions</div>
+            <div class="nav-tab" onclick="showTab('websubs')">New Online Enquiries</div>
             <div class="nav-tab" onclick="showTab('initial')">Initial Bookings</div>
             <div class="nav-tab" onclick="showTab('followups')">Follow-ups</div>
             <div class="nav-tab" onclick="showTab('operations')">Operational Impact</div>
@@ -333,22 +333,22 @@
             </div>
 
             <div class="chart-container">
-                <div class="chart-title">Follow-ups: Actual vs Patient-Base-Driven Baseline (Jan 2022 - May 2025)</div>
+                <div class="chart-title">Follow-ups: Actual vs Predicted (Jan 2022 - May 2025)</div>
                 <div class="chart-wrapper">
                     <canvas id="overviewBaselineChart"></canvas>
                 </div>
             </div>
         </div>
 
-        <!-- Web Submissions Tab -->
+        <!-- New online enquiries Tab -->
         <div id="websubs" class="tab-content">
             <div class="alert alert-danger">
                 <strong>⚠️ Critical Decline Alert</strong><br>
-                Web submissions have declined 31.7% in recent months. This impacts your lead pipeline.
+                New online enquiries have declined 31.7% in recent months. This impacts your lead pipeline.
             </div>
 
             <div class="chart-container">
-                <div class="chart-title">Web Submissions Trend (Enquiries)</div>
+                <div class="chart-title">New Online Enquiries Trend</div>
                 <div class="chart-wrapper">
                     <canvas id="websubsChart"></canvas>
                 </div>
@@ -599,7 +599,7 @@
                             borderWidth: 2
                         },
                         {
-                            label: 'Web Submissions',
+                            label: 'New online enquiries',
                             data: bookingData.webSubs,
                             borderColor: '#f39c12',
                             backgroundColor: 'rgba(243, 156, 18, 0.1)',
@@ -648,7 +648,7 @@
                     labels: bookingData.labels,
                     datasets: [
                         {
-                            label: 'Patient-Base-Driven Baseline',
+                            label: 'Predicted',
                             data: bookingData.patientBaseline,
                             borderColor: '#95a5a6',
                             backgroundColor: 'rgba(149, 165, 166, 0.1)',
